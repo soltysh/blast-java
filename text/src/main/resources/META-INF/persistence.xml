@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="2.1"
+    xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+  <persistence-unit name="primary" transaction-type="JTA">
+    <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
+    <class>org.soltysh.blast.text.Text</class>
+    <properties>
+      <property name="hibernate.transaction.jta.platform" value="org.hibernate.engine.transaction.jta.platform.internal.JBossAppServerJtaPlatform" />
+      <property name="hibernate.search.Rules.directory_provider" value="ram"/>
+      <property name="hibernate.ogm.datastore.provider"
+                value="org.hibernate.ogm.datastore.mongodb.impl.MongoDBDatastoreProvider"/>
+      <property name="hibernate.ogm.datastore.database" value="blast_text"/>
+      <property name="hibernate.ogm.datastore.host" value="text-db"/>
+      <property name="hibernate.ogm.datastore.port" value="27017"/>
+      <property name="hibernate.ogm.datastore.username" value="13eewfsd23rwef23re"/>
+      <property name="hibernate.ogm.datastore.password" value="wewsfsd234eewdsa"/>
+      <property name="hibernate.ogm.mongodb.authentication_database" value="blast_text"/>
+    </properties>
+  </persistence-unit>
+</persistence>
